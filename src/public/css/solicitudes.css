@@ -33,8 +33,9 @@ html {
     padding: 5px;
   }
   button{
-    padding: 3px 10px;
+    padding: 3px 8px;
     border-radius: 25px;
+    margin: 0 10px;
   }
 
 
@@ -91,76 +92,30 @@ html {
 }
 /*------------------------ seccion del registro ---------------------------------------*/
 
-.solicitud{
+.solicitudes{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
-    transition: ease .5s;
-    justify-items: center;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: auto;
+    align-items: center;
 }
-
-.form-solicitud{
-    grid-row: 1/2;
-    min-width: 400px;
-    width: 70%;
-    text-align: center;
-    padding: 25px;
-    background-color: rgba(208, 204, 204, 0.897);
-    border-radius: 50px;
-    align-self: center;
-    justify-self: center;
-}
-
-.form-solicitd form{
+table{
     grid-column: 1/2;
-    grid-row: 1/2;
-    justify-self: center;
-    text-align: center;
 }
-.form-img{
+.accion{
+    padding-top: 30px;
     grid-column: 2/3;
-    padding: 20px;
-    background-image: url("../img/solicitud.png");
-    height: auto;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: contain;
+    display: grid;
+    grid-template-columns: repeat(2, 60px);
+    gap: 5px;
+    justify-self: center;
+    
 }
-
-.form-solicitud button {
-    transition: 0.5s;
-    background-color: #109eb3;
-    color: #000;
-    padding: 14px 20px;
-    margin: 8px 0;
-    cursor:pointer;
-    width: 80%;
-    border: 0;
-    border-radius: 5px;
-  }
-.form-solicitud button:hover{
-    background-color: #17bcd5;
-
+#botone{
+    font-size: 15px;
+    padding: 3px;
+    height: 35px;
+    align-self: end;
 }
-.form-solicitud input[type=text], input[type=password], input[type=email], input[type=date], input[type=number] {
-    width: 80%;
-    padding: 10px 20px;
-    margin: 5px 0;
-    display:inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-      
-  }
-
-.form-solicitud select{
-    width: 80%;
-    padding: 10px 20px;
-    margin: 8px 0;
-    display:inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-
 /*----------------------------------- footer -------------------------------------------*/
 .footer{
     grid-area: footer;
@@ -229,24 +184,6 @@ footer .redes a:hover{
 
 
 @media screen and (max-width: 830px) {
-    .solicitud{
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        background-image: url("../img/solicitud.png");
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
-    
-    .form-solicitud{
-        grid-column: 1/2;
-        grid-row: 1/2;
-
-    }
-    .form-img{
-        background-image: none;
-        grid-column: 1/2;
-        grid-row: 2/3;
-    }
 }
 @media screen and (max-width: 500px) {
     .header{

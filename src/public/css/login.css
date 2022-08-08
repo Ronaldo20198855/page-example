@@ -20,11 +20,12 @@ html {
     height: 100vh;
     min-width: 300px;
     background:#FEFBE7;  /* fallback for old browsers */
+    background-image: linear-gradient(190deg, #fffffd 0, #fffff2 25%, #fefbe7 50%, #e7e6dc 75%, #d2d2d1 100%);  
     display: grid;
-    grid-template-rows: repeat(4 auto);
     grid-template-areas: 
     "header"
     "navbar"
+    "."
     "registro"
     "footer";
   }
@@ -89,40 +90,44 @@ html {
 .nav-link:hover{
     border-bottom: #109eb3 1px solid;
 }
+
 /*------------------------ seccion del registro ---------------------------------------*/
+
 
 .sesion{
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     transition: ease .5s;
+    
 }
 
 .form-sesion{
-    grid-row: 1/2;
+    grid-column: 1/2;
     min-width: 400px;
     text-align: center;
     padding: 25px;
     background-color: rgba(208, 204, 204, 0.897);
     border-radius: 50px;
     align-self: center;
-
 }
-
-.form-sesion form{
-    grid-column: 1/2;
+.form-sesion h2{
+    grid-column: 1/3;
     grid-row: 1/2;
+}
+.form-sesion form{
+    grid-column: 1/3;
+    grid-row: 2/3;
     justify-self: center;
     text-align: center;
 }
 .form-img{
-    grid-column: 2/3;
-    padding: 20px;
-}
-.form-img img{
+    background-image: url("../img/login-img.png");
     height: auto;
     width: 100%;
-    border-radius: 50px;
+    grid-column: 2/3;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 .form-sesion button {
     transition: 0.5s;
@@ -139,7 +144,7 @@ html {
     background-color: #17bcd5;
 
 }
-.form-sesion input[type=text], input[type=password], input[type=email], input[type=date], input[type=number] {
+.form-sesion input[type=text], input[type=password], input[type=email], input[type=date] {
     width: 80%;
     padding: 10px 20px;
     margin: 5px 0;
@@ -158,7 +163,7 @@ html {
     box-sizing: border-box;
 }
 
-/*----------------------------------- footer -------------------------------------------*/
+/*-------------------------------------------FOOTER-------------------------------------------*/
 .footer{
     grid-area: footer;
     width: 100%;
@@ -224,18 +229,23 @@ footer .redes a:hover{
 
 /*--------------------------------- screen media -------------------------------------*/
 
+@media screen and (max-width: 930px) {
 
-@media screen and (max-width: 830px) {
     .sesion{
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
+        background-image: url("../img/login-img.png");
+        background-size: contain;
+        background-repeat: no-repeat;
     }
-    
+    .form-sesion{
+        background-color: rgba(208, 204, 204, 0.897);
+        border-radius: 20px;
+    }
     .form-img{
-        grid-column: 1/2;
-        grid-row: 2/3;
-    }
+        background-image: none;
+    }       
 }
+
 @media screen and (max-width: 500px) {
     .header{
         grid-template-columns: repeat(1, 1fr);
@@ -255,5 +265,4 @@ footer .redes a:hover{
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(3, auto);
     }
-
 }

@@ -1,0 +1,52 @@
+<header class="header">
+        <div class="logo">
+            <img class="logo-img" src="/img/logoWithe.png" alt="logo de la empresa" height="100" width="100">
+            <h2>Test & Quality</h2>
+        </div>
+        <div class="gob">
+            <img src="/img/RD3.png" height="auto" width="230" alt="escudo nacional">
+            <form action="">
+                <input type="text" placeholder="Ingresa tu busqueda">
+                <button><i class="bi bi-search"></i></button>
+            </form>
+            <a href="">Inicio |</a>
+            <a href="">Mapa del sitio |</a>
+            <a href="">Contacto</a>
+        </div>
+    </header>
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+          <img src="/img/logo.png" alt="logo de la empresa" width="70" height="70">
+          <a class="navbar-brand ms-3"  href="#">TEST & QUALITY.</a>
+          <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse navbar-expand-xxl " id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="navlink nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              {{#unless user}}
+                <li class="nav-item">
+                  <a class="navlink1 nav-link" href="/login/signin">Login</a>
+                </li>
+                <li class="nav-item">
+                  <a class="navlink2 nav-link" href="/registro/signup">Registro</a>
+                </li>
+              {{/unless}}
+              {{#if user}}
+                <li class="nav-item">
+                  <a class="navlink2 nav-link" href="/solicitudes">solicitudes</a>
+                </li>
+                <li class="nav-item">
+                  <a class="navlink2 nav-link" href="/login/logout">Logout</a>
+                </li>
+                <li class="nav-item">
+                  <a class="navlink2 nav-link" href="#"><b>{{user.nombre_usuario}}</b></a>
+                </li>
+              {{/if}}
+            </ul>
+          </div>
+        </div>
+      </nav> 
+    </nav>
