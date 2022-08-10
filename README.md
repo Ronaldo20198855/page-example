@@ -25,4 +25,4 @@ This page have a views for logn in, logn up, inserts data in db and edits this d
 ---
 ![9](capturas/9(vista%20de%20usuario).jpeg)
 
-8/2022 
+ 
