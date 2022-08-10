@@ -14,7 +14,7 @@ pool.getConnection((err, connection)=>{
             console.error('La DATABESE tiene muchas conneciones')
         }
         if(err.code === 'ECONNREFUSED'){
-            console.error('La coneccion has sido rechasada')
+            console.error('La coneccion ha sido rechasada')
         }
         if(err) throw err;
     }
