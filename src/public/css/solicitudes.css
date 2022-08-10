@@ -27,6 +27,7 @@ html {
     "navbar"
     "registro"
     "footer";
+
   }
   input{
     border: none;
@@ -97,6 +98,7 @@ html {
     grid-template-columns: 4fr 1fr;
     grid-template-rows: auto;
     align-items: center;
+    margin: 150px 0;
 }
 table{
     grid-column: 1/2;
@@ -118,6 +120,7 @@ table{
 }
 /*----------------------------------- footer -------------------------------------------*/
 .footer{
+    margin-top: 100px;
     grid-area: footer;
     width: 100%;
     background-color: #292725; 
@@ -127,22 +130,42 @@ table{
     display: flex;
     flex-direction: row;
     flex-flow: wrap;
-    margin-top: 60px;
-    align-self: end;
+    margin-top: 30px;
+    gap: 10px;
+
+
 }
 footer .logo{
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin:  auto;
     display: flex;
     padding-top: 15px;
     color: #FEFBE7;
     font-size: 25px;
+    justify-self: center;
 }
 footer .nortics{
-    margin: auto;
     display: flex;
+    flex-direction: column;
+    margin: 10px auto;
     padding-top: 15px;
     color: #FEFBE7;
     font-size: 25px;
+    justify-content: center;
+    
+}
+.nortics-logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.copy{
+    display: flex;
+    font-size: 15px;
+    text-align: center;
+    justify-content: center;
+    margin-top: 30px;
 }
 footer p{
     margin: 20px 0 0 10px;
@@ -155,20 +178,22 @@ footer img{
     margin: 10px 0 0 10px;
 }
 
+footer .redes{
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+    padding: 10px 0;
+    justify-content: center;
+}
 
 footer .redes h2{
     font-size: 20px;
     margin-bottom: 10px;
     color: #FEFBE7;
 }
-footer .redes{
-    margin: 0 auto;
-    padding: 10px 0;
-    text-align: center;
-}
-
 
 footer .redes a{
+
    line-height: 25px;
    font-size: 2rem;
    color: #FEFBE7;
@@ -183,8 +208,7 @@ footer .redes a:hover{
 /*--------------------------------- screen media -------------------------------------*/
 
 
-@media screen and (max-width: 830px) {
-}
+
 @media screen and (max-width: 500px) {
     .header{
         grid-template-columns: repeat(1, 1fr);
@@ -201,8 +225,9 @@ footer .redes a:hover{
         justify-self: center;
      }
     .footer{
+        display: grid;
         grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(3, auto);
+        
     }
 
 }

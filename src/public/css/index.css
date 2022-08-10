@@ -203,6 +203,7 @@ html {
 .footer{
     grid-area: footer;
     width: 100%;
+    height: auto;
     background-color: #292725; 
     min-width: 250px;
     padding: 25px;
@@ -210,21 +211,39 @@ html {
     display: flex;
     flex-direction: row;
     flex-flow: wrap;
-    margin-top: 60px;
+    margin-top: 30px;
+    gap: 10px;
+
 }
 footer .logo{
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin:  auto;
     display: flex;
     padding-top: 15px;
     color: #FEFBE7;
     font-size: 25px;
 }
 footer .nortics{
-    margin: auto;
     display: flex;
+    flex-direction: column;
+    margin: 10px auto;
     padding-top: 15px;
     color: #FEFBE7;
     font-size: 25px;
+    
+}
+.nortics-logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.copy{
+    display: flex;
+    font-size: 15px;
+    text-align: center;
+    justify-content: center;
+    margin-top: 30px;
 }
 footer p{
     margin: 20px 0 0 10px;
@@ -237,20 +256,22 @@ footer img{
     margin: 10px 0 0 10px;
 }
 
+footer .redes{
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+    padding: 10px 0;
+    justify-content: center;
+}
 
 footer .redes h2{
     font-size: 20px;
     margin-bottom: 10px;
     color: #FEFBE7;
 }
-footer .redes{
-    margin: 0 auto;
-    padding: 10px 0;
-    text-align: center;
-}
-
 
 footer .redes a{
+
    line-height: 25px;
    font-size: 2rem;
    color: #FEFBE7;
