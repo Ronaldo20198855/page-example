@@ -1,5 +1,4 @@
 const express = require('express');
-const { restart } = require('nodemon');
 const routes = express.Router();
 const { isLoggedIn } = require('../lib/auth');
 const passport = require('passport');
