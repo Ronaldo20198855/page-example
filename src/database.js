@@ -3,35 +3,7 @@ const {database} = require('./keys');
 const {promisify} = require('util');
 
 
-  
-  var connection; 
-  
-  function pool() {
-    connection = mysql.createConnection(database); 
-                                                    
-  
-    connection.connect(function(err) {              
-      if(err) {                                     
-        console.log('error when connecting to db:', err);
-        setTimeout(pool, 2000); 
-      }                                    
-    });                                     
-                                            
-    connection.on('error', function(err) {
-      console.log('db error', err);
-      if(err.code === 'PROTOCOL_CONNECTION_LOST') { 
-        pool();                         
-      } else {                                      
-        throw err;                                  
-      }
-    });
-  }
-  pool()
-  module.exports = pool;
 
-
-
-/*
 const pool = mysql.createPool(database);
 
 pool.getConnection((err, connection)=>{
@@ -59,4 +31,34 @@ pool.getConnection((err, connection)=>{
 });
 
 pool.query = promisify(pool.query);
+  
+
+module.exports = pool;
+
+
+
+/*
+  var connection; 
+  
+  function pool() {
+    connection = mysql.createConnection(database); 
+                                                    
+  
+    connection.connect(function(err) {              
+      if(err) {                                     
+        console.log('error when connecting to db:', err);
+        setTimeout(pool, 2000); 
+      }                                    
+    });                                     
+                                            
+    connection.on('error', function(err) {
+      console.log('db error', err);
+      if(err.code === 'PROTOCOL_CONNECTION_LOST') { 
+        pool();                         
+      } else {                                      
+        throw err;                                  
+      }
+    });
+  }
+  pool()
 */

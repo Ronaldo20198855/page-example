@@ -1,13 +1,13 @@
 module.exports = {
     database: {
-
-        host: 'ec2-54-159-175-38.compute-1.amazonaws.com',
-        port: 5432,
-        database: 'd68ks9s8mdss0c',
-        user: 'snslkibzurltfy',
-        password: '70d41e371bea89569fc6eb56d6d1f1511ad73fd88e4c9095e9c360831538da77',
+        database: 'adminproyect-final',
+        user: 'p7dc2b02kmap',
+        host: 'p3rmlslwcexi.us-east-3.psdb.cloud',
+        password: 'pscale_pw_n2GlW6zOUuDv1bNNB565rEEU9v9Hb-BQdSZn9EE_HC8',
+        ssl: {
+            rejectUnauthorized: false
+          }
         
-
     }
 }
 

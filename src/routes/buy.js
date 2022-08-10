@@ -31,7 +31,7 @@ routes.post('/add', isLoggedIn, async(req, res, done)=>{
     }else{
         res.redirect('/buy/alert')  
     }
-   
+    pool.end()
 });
 
 
