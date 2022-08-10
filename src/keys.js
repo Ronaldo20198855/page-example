@@ -1,5 +1,9 @@
 module.exports = {
-    database: { 
+    database: {
+        connectionLimit : 1000,
+        connectTimeout  : 60 * 60 * 1000,
+        acquireTimeout  : 60 * 60 * 1000,
+        timeout         : 60 * 60 * 1000, 
         host: 'ec2-54-159-175-38.compute-1.amazonaws.com',
         port: 5432,
         database: 'd68ks9s8mdss0c',
