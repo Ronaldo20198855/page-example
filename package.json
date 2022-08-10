@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
-    "dev": "nodemon src/"
   },
   "author": "Ronaldo Lantigua",
   "license": "ISC",
@@ -21,9 +20,7 @@
     "mysql": "^2.18.1",
     "passport": "^0.6.0",
     "passport-local": "^1.0.0",
-    "timeago.js": "^4.0.2"
-  },
-  "devDependencies": {
+    "timeago.js": "^4.0.2",
     "nodemon": "^2.0.19"
   }
 }
