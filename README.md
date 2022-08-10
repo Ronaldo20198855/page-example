@@ -5,6 +5,9 @@ In this aplication i created a example page whit **node** and other thecnologies
 
 This page have a views for logn in, logn up, inserts data in db and edits this data whit a "admin user". 
 
+## Link: 
+https://adminproyect-final.herokuapp.com/solicitudes
+
 ## **screenshots**
 
 ![1](capturas/1.jpeg)
