@@ -1,4 +1,0 @@
-database: adminproyect-final
-username: q3lj23mohvvg
-host: p3rmlslwcexi.us-east-3.psdb.cloud
-password: pscale_pw_GvgcthOcxa94DqK1tZ7CHQoc8GGXi3_6Bmf2zpEBuHU
