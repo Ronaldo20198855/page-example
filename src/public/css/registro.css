@@ -3,6 +3,7 @@ html {
     font-size: 16px;
     font-family: sans-serif;
     scroll-behavior: smooth;
+    height: auto;
   }
 
   *,
@@ -18,6 +19,7 @@ html {
   body{
     margin: 0;
     min-width: 300px;
+    overflow-x: hidden;
     background:#FEFBE7;  /* fallback for old browsers */
     background-image: linear-gradient(190deg, #fffffd 0, #fffff2 25%, #fefbe7 50%, #e7e6dc 75%, #d2d2d1 100%);  
     display: grid;
@@ -28,88 +30,41 @@ html {
     "registro"
     "footer";
   }
+
   input{
     border: none;
     padding: 5px;
   }
   button{
-    padding: 3px 10px;
+    padding: 3px 8px;
     border-radius: 25px;
+    margin: 0 10px;
   }
-
-form{
-    width: 80%;
-}
-/*------------------------------------ HEADER & NAV --------------------------------------*/
-  .header{
-    grid-area: header;  
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
-    align-items: center;
- }
- .logo{
-    grid-column: 1/2;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-self: left;
-    padding-left: 25px;
- }
- .logo h2{
-    display: inline-block;
- }
-
-
- .gob{
-    grid-column: 2/3;
-    width: 50%;
-    justify-self: right;
-
- }
- .gob a{
-    text-emphasis: none;
-    text-decoration: none;
-    color: #777372;
-    text-decoration: solid;
- }
- .gob input{
-    background-color: #f5f5fd;
- }
- .gob button{
-    color: #FFF;
-    background-color: #115fa7;
-    
- }
-.navbar{
-    grid-area: navbar;
-    background-color: #FEFBE7;
-}
-.navbar a{
-    color: #777372;
-}
-.nav-link:hover{
-    border-bottom: #109eb3 1px solid;
-}
 
 /*------------------------ seccion del registro ---------------------------------------*/
 
 .registro{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    justify-items: center;
+    justify-content: center;
     transition: ease .5s;
+    padding: 50px;
+    align-items: center;
+    width: 100vw;
 }
 
 .form-registro{
     grid-column: 1/2;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 9fr;
-    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    width: 70%;
+    height: 100%;
+    align-items: center;
+    justify-items: center;
     padding: 5px;
     background-color: rgba(208, 204, 204, 0.897);
-    border-radius: 50px;
+    border-radius: 40px;
 }
 .form-registro h2{
     grid-column: 1/3;
@@ -120,14 +75,17 @@ form{
     grid-row: 2/3;
     justify-self: center;
     text-align: center;
+    width: 90%;
 }
 .form-img{
-    background-image: url("../img/registro-img.png");
     height: auto;
     width: 100%;
     grid-column: 2/3;
-    background-repeat: no-repeat;
-    background-size: contain;
+}
+.form-img img{
+    height: auto;
+    width: 100%;
+    max-width: 500px;
 }
 .form-registro button {
     transition: 0.5s;
@@ -144,7 +102,7 @@ form{
     background-color: #17bcd5;
 
 }
-.form-registro input[type=text], input[type=password], input[type=email], input[type=date],input[type=number] {
+.form-registro input[type="text"], input[type="password"], input[type="email"], input[type="date"],input[type="number"] {
     width: 90%;
     padding: 10px 10px;
     margin: 5px 0;
@@ -164,128 +122,20 @@ form{
     
 }
 
-/*-------------------------------------------FOOTER-------------------------------------------*/
-.footer{
-    margin-top: 100px;
-    grid-area: footer;
-    width: 100%;
-    background-color: #292725; 
-    min-width: 250px;
-    padding: 25px;
-    color: #FFFFFF;
-    display: flex;
-    flex-direction: row;
-    flex-flow: wrap;
-    margin-top: 30px;
-    gap: 10px;
 
-
-}
-footer .logo{
-    display: flex;
-    flex-direction: column;
-    margin:  auto;
-    display: flex;
-    padding-top: 15px;
-    color: #FEFBE7;
-    font-size: 25px;
-    justify-self: center;
-}
-footer .nortics{
-    display: flex;
-    flex-direction: column;
-    margin: 10px auto;
-    padding-top: 15px;
-    color: #FEFBE7;
-    font-size: 25px;
-    justify-content: center;
-    
-}
-.nortics-logo{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-.copy{
-    display: flex;
-    font-size: 15px;
-    text-align: center;
-    justify-content: center;
-    margin-top: 30px;
-}
-footer p{
-    margin: 20px 0 0 10px;
-    transition: ease-in-out 300ms;
-}
-footer p:hover{
-    color: #109eb3;
-}
-footer img{
-    margin: 10px 0 0 10px;
-}
-
-footer .redes{
-    display: flex;
-    flex-direction: column;
-    margin: 10px auto;
-    padding: 10px 0;
-    justify-content: center;
-}
-
-footer .redes h2{
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #FEFBE7;
-}
-
-footer .redes a{
-
-   line-height: 25px;
-   font-size: 2rem;
-   color: #FEFBE7;
-   margin: 0 10px;
-   transition: all 300ms ease;
-} 
-footer .redes a:hover{
-    color: #109eb3;
-}
 /*--------------------------------- screen media -------------------------------------*/
 
 @media screen and (max-width: 930px) {
 
-    .registro{
-        grid-template-columns: 1fr;
-        background-image: url("../img/registro-img.png");
-        background-repeat: no-repeat;
-    }
+
     .form-registro{
+        grid-column: span 2;
         background-color: rgba(208, 204, 204, 0.897);
-        border-radius: 20px;
+        justify-self: center;
+        width: 60%;
     }
-    .form-img{
-        background-image: none;
+    .form-img img{ 
+        display: none;
     }       
 }
 
-@media screen and (max-width: 500px) {
-    .header{
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(2, auto);
-     }
-    .logo{
-        grid-column: 1/2;
-        grid-row: 1/2;
-        justify-self: center;
-     }
-    .gob{
-        grid-column: 1/2;
-        grid-row: 2/3;
-        justify-self: center;
-     }
-
-    
-    .footer{
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(3, auto);
-    }
-}

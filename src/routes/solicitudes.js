@@ -15,7 +15,7 @@ routes.post('/add', async (req, res)=>{
         prueba_solicitada,
         ID_usuario
     };
-    await pool.query('INSERT INTO SOLICITUDES set ? ', [newSolicitud]);
+    await pool.query('INSERT INTO solicitudes set ? ', [newSolicitud]);
     res.redirect('/solicitudes')
 });
 

@@ -1,0 +1,89 @@
+.footer{
+    grid-area: footer;
+    width: 100%;
+    height: auto;
+    background-color: #292725; 
+    min-width: 250px;
+    padding: 25px;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    margin-top: 30px;
+    gap: 10px;
+    align-self: end;
+
+}
+footer .logo{
+    display: flex;
+    flex-direction: column;
+    margin:  auto;
+    display: flex;
+    padding-top: 15px;
+    color: #FEFBE7;
+    font-size: 25px;
+}
+footer .nortics{
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+    padding-top: 15px;
+    color: #FEFBE7;
+    font-size: 25px;
+    
+}
+.nortics-logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.copy{
+    display: flex;
+    font-size: 15px;
+    text-align: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+footer p{
+    margin: 20px 0 0 10px;
+    transition: ease-in-out 300ms;
+}
+footer p:hover{
+    color: #109eb3;
+}
+footer img{
+    margin: 10px 0 0 10px;
+}
+
+footer .redes{
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+    padding: 10px 0;
+    justify-content: center;
+}
+
+footer .redes h2{
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #FEFBE7;
+}
+
+footer .redes a{
+
+   line-height: 25px;
+   font-size: 2rem;
+   color: #FEFBE7;
+   margin: 0 10px;
+   transition: all 300ms ease;
+} 
+footer .redes a:hover{
+    color: #109eb3;
+}
+
+@media screen and (max-width: 625px) {
+    .footer{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, auto);
+    }
+}

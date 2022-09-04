@@ -1,9 +1,9 @@
 module.exports = {
     database: {
         database: 'adminproyect-final',
-        user: 'p7dc2b02kmap',
-        host: 'p3rmlslwcexi.us-east-3.psdb.cloud',
-        password: 'pscale_pw_n2GlW6zOUuDv1bNNB565rEEU9v9Hb-BQdSZn9EE_HC8',
+        user: 'khkukplk6xbnxngve098',
+        host: 'us-east.connect.psdb.cloud',
+        password: 'pscale_pw_Eayzhm2wgVzNA5VILZ44oCYJtjdTZRfBcOogbb6OYQi',
         ssl: {
             rejectUnauthorized: false
           }
